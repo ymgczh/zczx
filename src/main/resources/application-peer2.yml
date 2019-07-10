@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: zhymc-eureka
+  profiles:
+    active: peer2
+
+server:
+  port: 8001
+
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:8000/eureka/
+    fetch-registry: false
+    register-with-eureka: false
